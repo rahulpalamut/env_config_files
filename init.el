@@ -11,4 +11,5 @@
 (fset 'makefile
 (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("13obmakefile!make30{o" 0 "%d")) arg)))
 
-(define-key global-map [] 'makefile)
+(define-key global-map [()] 'makefile)
+(global-set-key (kbd "C-c C-m") 'makefile)
