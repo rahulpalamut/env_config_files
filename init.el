@@ -32,5 +32,5 @@
 ;; 1) delete all other windows 2) run the script in command 3) switch buffer 4) horizontally split the buffer 5) switch buffer
 ;; 6) open the output.diff file
 (fset 'test_local
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("1!./test	o3ooutput.diffo" 0 "%d")) arg)))
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("1xkill-matching-buffersoutput.diffyes!./test_localo3ooutput.diffo" 0 "%d")) arg)))
 (global-set-key (kbd "C-c C-t") 'test_local)
