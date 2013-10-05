@@ -1,0 +1,31 @@
+;; Object code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "code/"
+  :tables (list 
+   (semanticdb-table "edfile.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("edfile" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [135 148]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [110 397]))                  
+                :type "class")
+                nil [92 400]))          
+    :file "edfile.java"
+    :pointmax 402
+    :fsize 401
+    :lastmodtime '(21044 63708 228895 433000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!rahul!cmps012b-wm!Assignments!asg2j-edfile-dllist!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
