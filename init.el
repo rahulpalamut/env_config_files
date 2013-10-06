@@ -10,6 +10,7 @@
 
 ;; line numbers
 (global-linum-mode t)
+(setq column-number-mode t)
 
 ;;enable smartparens
 ;;-------------------------------------Macros--------------------------------------------------------
@@ -19,7 +20,7 @@
 ;; Description: runs the make command and pipes the output to a new buffer called makefile
 ;; Process:
 ;; 1) Save the file 2) Eliminate other windows 3) Make new vertical window 4) Switch to new window 5) open buffer makefile
-;; 6) Delete buffer contents 7) execute make command and pipe to buffer 8) shrink window by 30 spaces 
+;; 6) Delete buffer contents 7) execute make command and pipe to buffer 8) shrink window by 25 spaces 
 ;; Quick-Key: C-c C-m
 
 (fset 'makefile
@@ -29,8 +30,8 @@
 ;; Test_local macro
 ;; Description: runs the test_local script which tests my code
 ;; Process:
-;; 1) delete all other windows 2) run the script in command 3) switch buffer 4) horizontally split the buffer 5) switch buffer
-;; 6) open the output.diff file
-(fset 'test_local
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("1xkill-matching-buffersoutput.diffyes!./test_localo3ooutput.diffo" 0 "%d")) arg)))
-(global-set-key (kbd "C-c C-t") 'test_local)
+;; 1) remove any split 2) open/create output.diff buffer 3) delete output.diff buffer 4)run test_local script
+;; 5)Split screen and switch screen 6) open created output.diff file 7) shrink window by 25 spaces
+(fset 'test_local1
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("1boutput.diffkoutput.diff!./test_localo3ooutput.diff25{o" 0 "%d")) arg)))
+(global-set-key (kbd "C-c C-t") 'test_local1)
